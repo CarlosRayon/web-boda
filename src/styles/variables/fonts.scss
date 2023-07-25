@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'gilda_displayregular';
+    src: url('/fonts/gildadisplay-regular-webfont.woff2') format('woff2'), url('/fonts/gildadisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'barlowregular';
+    src: url('/fonts/barlow-regular-webfont.woff2') format('woff2'), url('/fonts/barlow-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// For title
+@mixin font-gilda {
+    font-family: 'gilda_displayregular';
+}
+
+// For normal text
+@mixin font-barlow {
+    font-family: 'barlowregular';
+}

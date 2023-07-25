@@ -1,0 +1,19 @@
+---
+/* Hace que la propiedad sea requerido */
+interface Props {
+    autor: string;
+}
+
+const { autor } = Astro.props;
+---
+
+<div class='footer'>
+    <p>&copy {autor}</p>
+</div>
+
+<style lang='scss'>
+    .footer {
+        display: grid;
+        place-items: center;
+    }
+</style>
