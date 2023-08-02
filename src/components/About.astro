@@ -1,6 +1,31 @@
 ---
+import Title from "./TitleSection.astro";
 ---
 
 <section class='container'>
-<h1>Sobre</h1>
+    <Title title="Sobre Nosotros" />
+
+    <div class='grid grid-cols-1 md:grid-cols-2 place-content-center'>
+        <div class='grid place-content-center p-5'>
+            <img class='object-contain' src='https://dummyimage.com/500x300/000/fff.png' alt='imagen 1' />
+        </div>
+        <div class='grid place-content-center p-5'>
+            <p class="text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, ipsam laboriosam? Ratione ipsum, neque corporis fugit, quam unde
+                fugiat corrupti, accusantium sunt nihil totam in labore repellat laborum architecto impedit.
+            </p>
+        </div>
+    </div>
+
+    <div class='grid grid-cols-1 md:grid-cols-2 place-content-center'>
+        <div class='grid place-content-center p-5'>
+            <p class="text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, ipsam laboriosam? Ratione ipsum, neque corporis fugit, quam unde
+                fugiat corrupti, accusantium sunt nihil totam in labore repellat laborum architecto impedit.
+            </p>
+        </div>
+        <div class='grid place-content-center p-5'>
+            <img class='object-contain' src='https://dummyimage.com/500x300/000/fff.png' alt='imagen 1' />
+        </div>
+    </div>
 </section>
