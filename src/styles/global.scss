@@ -1,8 +1,11 @@
-@import "./variables/fonts.scss";
-@import "./variables/color.scss";
+@import "modern-css-reset";
+@import "./variables/_color.scss";
+@import "./mixins/_fonts.scss";
+@import "./mixins/_media-query.scss";
+@import "./grid.scss";
 
 * {
-    @include font-barlow;
+    @include mx-font-barlow;
 }
 
 h1,
@@ -11,5 +14,5 @@ h3,
 h4,
 h5,
 h6 {
-    @include font-gilda;
+    @include mx-font-gilda;
 }
