@@ -1,23 +1,31 @@
 ---
+import Title from "./TitleSection.astro";
 ---
 
-<section>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem hic accusantium maiores cupiditate excepturi doloribus autem
-        incidunt maxime consequatur, quaerat et consectetur porro dolores enim sunt molestias. Expedita, consequuntur.
-    </p>
+<section class='container'>
+    <Title title="Sobre Nosotros" />
 
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque recusandae cumque reiciendis debitis modi. Numquam non corrupti sed. In totam
-        fuga laborum recusandae unde laboriosam error pariatur! Nulla, sed minus.
-    </p>
+    <div class='grid grid-cols-1 md:grid-cols-2 place-content-center'>
+        <div class='grid place-content-center p-5'>
+            <img class='object-contain' src='https://dummyimage.com/500x300/000/fff.png' alt='imagen 1' />
+        </div>
+        <div class='grid place-content-center p-5'>
+            <p class="text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, ipsam laboriosam? Ratione ipsum, neque corporis fugit, quam unde
+                fugiat corrupti, accusantium sunt nihil totam in labore repellat laborum architecto impedit.
+            </p>
+        </div>
+    </div>
 
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque recusandae cumque reiciendis debitis modi. Numquam non corrupti sed. In totam
-        fuga laborum recusandae unde laboriosam error pariatur! Nulla, sed minus.
-    </p>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque recusandae cumque reiciendis debitis modi. Numquam non corrupti sed. In totam
-        fuga laborum recusandae unde laboriosam error pariatur! Nulla, sed minus.
-    </p>
+    <div class='grid grid-cols-1 md:grid-cols-2 place-content-center'>
+        <div class='grid place-content-center p-5'>
+            <p class="text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, ipsam laboriosam? Ratione ipsum, neque corporis fugit, quam unde
+                fugiat corrupti, accusantium sunt nihil totam in labore repellat laborum architecto impedit.
+            </p>
+        </div>
+        <div class='grid place-content-center p-5'>
+            <img class='object-contain' src='https://dummyimage.com/500x300/000/fff.png' alt='imagen 1' />
+        </div>
+    </div>
 </section>
