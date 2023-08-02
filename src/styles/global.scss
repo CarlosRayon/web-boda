@@ -16,3 +16,7 @@ h5,
 h6 {
     @include mx-font-gilda;
 }
+
+body {
+    min-height: 100vh;
+}

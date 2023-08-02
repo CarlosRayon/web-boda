@@ -48,40 +48,38 @@
     /* CSS */
 }
 
-
-@mixin mx-for-sm-phone {
+@mixin mq-for-sm-phone {
     @media (max-width: 319px) {
         @content;
     }
 }
 
-@mixin mx-for-phone {
+@mixin mq-for-phone {
     @media (min-width: 320px) {
         @content;
     }
 }
 
-@mixin mx-for-table {
+@mixin mq-for-table {
     @media (min-width: 481px) {
         @content;
     }
 }
 
-@mixin mx-for-table-landscape {
+@mixin mq-for-table-landscape {
     @media (min-width: 768px) {
         @content;
     }
 }
 
-@mixin mx-for-laptop {
+@mixin mq-for-laptop {
     @media (min-width: 1025px) {
         @content;
     }
 }
 
-@mixin mx-for-desktop {
+@mixin mq-for-desktop {
     @media (min-width: 1281px) {
         @content;
     }
 }
-
