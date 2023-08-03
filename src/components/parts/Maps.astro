@@ -1,9 +1,11 @@
 ---
-import MapIframe from "./MapIframe.astro";
-import MapScript from "./MapScript.astro";
+import MapIframe from "./maps/MapIframe.astro";
+import MapScript from "./maps/MapScript.astro";
+import MapLoader from "./maps/MapLoader.astro";
 ---
 
-<div class='grid grid-cols-1 md:grid-cols-2 gap-9 place-content-center'>
-    <MapIframe />
+<div class='grid grid-cols-1 md:grid-cols-3 gap-9 place-content-center'>
     <MapScript />
+    <MapIframe />
+    <MapLoader />
 </div>
