@@ -1,13 +1,13 @@
 ---
 import MapIframe from "./maps/MapIframe.astro";
-import MapScript from "./maps/MapScript.astro";
-import MapLoader from "./maps/MapLoader.astro";
-import MyApp from "../react/ReactComponentExample";
 ---
 
-<div class='grid grid-cols-1 md:grid-cols-3 gap-9 place-content-center'>
-    <!-- <MapScript /> -->
+<div class='grid grid-cols-1 md:grid-cols-2 gap-9 place-content-center'>
     <MapIframe />
-    <MapLoader />
-    <!-- <MyApp client:only="react" /> -->
+    <div class='grid place-content-center'>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quo inventore accusamus veniam iste fugiat illo commodi modi, rerum
+            saepe aspernatur nulla ad facere sed fuga quia pariatur ea quisquam!
+        </p>
+    </div>
 </div>
