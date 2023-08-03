@@ -1,0 +1,28 @@
+<div class='grid place-content-center'>
+    <div id='map'></div>
+</div>
+
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), { // @
+            center: { lat: 43.2607637294967, lng: -4.264787714405649 },
+            zoom: 13,
+        });
+
+        var marker = new google.maps.Marker({
+            position: { lat: 43.2607637294967, lng: -4.264787714405649 },
+            map: map,
+            title: "Los Molinos de Ruente",
+        });
+    }
+    window.initMap = initMap;
+</script>
+<script is:inline async src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD52meBZItLhvKwmtCeL1DUlz1rWIMBIgc&callback=initMap'></script>
+
+<style lang='scss'>
+    #map {
+        height: 300px;
+        width: 300px;
+    }
+</style>
