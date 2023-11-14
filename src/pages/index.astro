@@ -1,16 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import About from "../components/About.astro";
+import About from "../components/AboutUs.astro";
 import EventLocation from "../components/EventLocation.astro";
+import EventTimes from "../components/EventTimes.astro";
 import Footer from "../components/Footer.astro";
+import ConfirmAssistance from "../components/ConfirmAssistance.astro";
 ---
 
-<Layout title='Boda de Carlos e Inés'>
-    <main class='container max-w-6xl '>
-        <Header />
-        <About />
-        <EventLocation />
-        <Footer autor='Carlos Rayón Álvarez' />
-    </main>
+<Layout title="Boda de Carlos e Inés">
+  <main class="container-lg">
+    <Header />
+    <About />
+    <EventLocation />
+    <EventTimes />
+    <ConfirmAssistance />
+    <Footer autor="Carlos Rayón Álvarez" />
+  </main>
 </Layout>
