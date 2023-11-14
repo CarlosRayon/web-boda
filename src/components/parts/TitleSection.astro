@@ -7,6 +7,6 @@ interface Props {
 const { title, toUpper = false } = Astro.props;
 ---
 
-<div class='TitleSection py-4 md:py-9 px-3'>
-    <h2 class:list={['TitleSection-text text-3xl md:text-5xl text-center', {uppercase: toUpper}]}>{title}</h2>
+<div class='py-4 md:py-9 px-3'>
+    <h2 class:list={['text-3xl md:text-5xl text-center', {uppercase: toUpper}]}>{title}</h2>
 </div>

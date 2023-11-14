@@ -1,0 +1,124 @@
+---
+import TitleSection from "./parts/TitleSection.astro";
+const linkBusSanvi = import.meta.env.LINK_BUS_SANVI;
+const linkBusComillas = import.meta.env.LINK_BUS_COMILLAS;
+const linkBusCabe = import.meta.env.LINK_BUS_CABE;
+---
+
+<!-- component -->
+<section class="container mx-auto w-full h-full">
+  <TitleSection title="Horarios" toUpper />
+
+  <div class="relative wrap overflow-hidden p-10 h-full">
+    <div
+      class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+      style="left: 50%"
+    >
+    </div>
+    <!-- right timeline -->
+    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full"
+      >
+        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+      </div>
+      <div
+        class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-sanvi cursor-pointer animate__animated animate__backInRight"
+      >
+        <h3 class="mb-3 font-bold text-gray-800 text-xl">
+          12:00 - San Vicente de la Barquera
+        </h3>
+        <p
+          class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+        >
+          Salida del autobus desde la estacion de autobuses de San Vicente de la
+          Barquera
+        </p>
+      </div>
+    </div>
+
+    <!-- left timeline -->
+    <div
+      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+    >
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-red-400 shadow-xl w-8 h-8 rounded-full"
+      >
+        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+      </div>
+      <div
+        class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-comillas cursor-pointer animate__animated animate__backInLeft"
+      >
+        <h3 class="mb-3 font-bold text-white text-xl">12:15 - Comillas</h3>
+        <p
+          class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100"
+        >
+          Parada del autobus para recoger invitados en la parada del autobus de
+          Comillas
+        </p>
+      </div>
+    </div>
+
+    <!-- right timeline -->
+    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full"
+      >
+        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+      </div>
+      <div
+        class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe cursor-pointer"
+      >
+        <h3 class="mb-3 font-bold text-gray-800 text-xl">
+          12:45 - Cabezon de la Sal
+        </h3>
+        <p
+          class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+        >
+          Ultima para del autobus para recoger invitados antes de llegar a Ruente
+        </p>
+      </div>
+    </div>
+
+    <!-- left timeline -->
+    <div
+      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+    >
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 bg-red-400 shadow-xl w-8 h-8 rounded-full"
+      >
+        <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+      </div>
+      <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+        <h3 class="mb-3 font-bold text-white text-xl">13:30 Boda</h3>
+        <p
+          class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100"
+        >
+          ¡Que empiece la fiesta!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ linkBusSanvi, linkBusComillas, linkBusCabe }}>
+  document.querySelector(".bus-sanvi").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.open(linkBusSanvi, "_blank");
+  });
+
+  document
+    .querySelector(".bus-comillas")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      window.open(linkBusComillas, "_blank");
+    });
+  document.querySelector(".bus-cabe").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.open(linkBusCabe, "_blank");
+  });
+</script>
