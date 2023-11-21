@@ -1,8 +1,10 @@
 ---
 import TitleSection from "./parts/TitleSection.astro";
-const linkBusSanvi = import.meta.env.LINK_BUS_SANVI;
-const linkBusComillas = import.meta.env.LINK_BUS_COMILLAS;
-const linkBusCabe = import.meta.env.LINK_BUS_CABE;
+import { Icon } from "astro-icon";
+
+const linkBusSanvi = import.meta.env.PUBLIC_LINK_BUS_SANVI;
+const linkBusComillas = import.meta.env.PUBLIC_LINK_BUS_COMILLAS;
+const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
 ---
 
 <!-- component -->
@@ -19,21 +21,20 @@ const linkBusCabe = import.meta.env.LINK_BUS_CABE;
     <div class="mb-8 flex justify-between items-center w-full right-timeline">
       <div class="order-1 w-5/12"></div>
       <div
-        class="z-20 flex items-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full"
+        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
       >
-        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+        <Icon name="mdi:bus" />
       </div>
       <div
-        class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-sanvi cursor-pointer animate__animated animate__backInRight"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-sanvi cursor-pointer animate__animated animate__backInRight dark:hover:bg-green-100" title="Picha para ubicacion"
       >
         <h3 class="mb-3 font-bold text-gray-800 text-xl">
-          12:00 - San Vicente de la Barquera
+          12:00 - San Vicente
         </h3>
         <p
           class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
         >
-          Salida del autobus desde la estacion de autobuses de San Vicente de la
-          Barquera
+          Parada autobus
         </p>
       </div>
     </div>
@@ -44,19 +45,18 @@ const linkBusCabe = import.meta.env.LINK_BUS_CABE;
     >
       <div class="order-1 w-5/12"></div>
       <div
-        class="z-20 flex items-center order-1 bg-red-400 shadow-xl w-8 h-8 rounded-full"
+        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
       >
-        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+        <Icon name="mdi:bus" />
       </div>
       <div
-        class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-comillas cursor-pointer animate__animated animate__backInLeft"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-comillas cursor-pointer text-end animate__animated animate__backInLeft dark:hover:bg-green-100" title="Picha para ubicacion"
       >
-        <h3 class="mb-3 font-bold text-white text-xl">12:15 - Comillas</h3>
+        <h3 class="mb-3 font-bold text-gray-800 text-xl ">12:15 - Comillas</h3>
         <p
-          class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100"
+          class="text-sm font-medium leading-snug tracking-wide text-gray-800text-opacity-100"
         >
-          Parada del autobus para recoger invitados en la parada del autobus de
-          Comillas
+          Parada del autobus
         </p>
       </div>
     </div>
@@ -65,44 +65,65 @@ const linkBusCabe = import.meta.env.LINK_BUS_CABE;
     <div class="mb-8 flex justify-between items-center w-full right-timeline">
       <div class="order-1 w-5/12"></div>
       <div
-        class="z-20 flex items-center order-1 bg-gray-400 shadow-xl w-8 h-8 rounded-full"
+        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
       >
-        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+        <Icon name="mdi:bus" />
       </div>
       <div
-        class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe cursor-pointer"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe cursor-pointer animate__animated animate__backInRight dark:hover:bg-green-100" title="Picha para ubicacion"
       >
-        <h3 class="mb-3 font-bold text-gray-800 text-xl">
-          12:45 - Cabezon de la Sal
-        </h3>
+        <h3 class="mb-3 font-bold text-gray-800 text-xl">12:45 - Cabezon</h3>
         <p
           class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
         >
-          Ultima para del autobus para recoger invitados antes de llegar a Ruente
+          Parada del autobus
         </p>
       </div>
     </div>
 
     <!-- left timeline -->
     <div
-      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline text-end "
     >
       <div class="order-1 w-5/12"></div>
       <div
-        class="z-20 flex items-center order-1 bg-red-400 shadow-xl w-8 h-8 rounded-full"
+        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
       >
-        <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+        <Icon name="emojione-monotone:party-popper" />
       </div>
-      <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-        <h3 class="mb-3 font-bold text-white text-xl">13:30 Boda</h3>
+      <div class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 animate__animated animate__backInLeft">
+        <h3 class="mb-3 font-bold text-xl">13:30 Boda</h3>
         <p
-          class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100"
+          class="text-sm font-medium leading-snug tracking-widetext-opacity-100"
         >
           ¡Que empiece la fiesta!
         </p>
       </div>
     </div>
+
+  <!-- right timeline -->
+    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
+      >
+        <Icon name="mdi:bus" />
+      </div>
+      <div
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe animate__animated animate__backInRight" title="Picha para ubicacion"
+      >
+        <h3 class="mb-3 font-bold text-gray-800 text-xl">00:00 - Bus vuelta</h3>
+        <p
+          class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+        >
+          Autobus de vuelta parando mismo sitio que la ida
+        </p>
+      </div>
+    </div>
+
   </div>
+
+
 </section>
 
 <script define:vars={{ linkBusSanvi, linkBusComillas, linkBusCabe }}>
