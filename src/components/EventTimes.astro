@@ -26,16 +26,17 @@ const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
         <Icon name="mdi:bus" />
       </div>
       <div
-        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-sanvi cursor-pointer animate__animated animate__backInRight dark:hover:bg-green-100" title="Picha para ubicacion"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-sanvi cursor-pointer animate__animated animate__backInRight time-border"
+        title="Picha para ubicacion"
       >
-        <h3 class="mb-3 font-bold text-gray-800 text-xl">
-          12:00 - San Vicente
-        </h3>
-        <p
-          class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
-        >
-          Parada autobus
-        </p>
+        <a href={linkBusSanvi} target="_blank">
+          <h3 class="mb-3 font-bold text-gray-800 text-xl">San Vicente</h3>
+          <p
+            class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+          >
+            Salida a las <strong>00:00</strong> desde la parada autobus.
+          </p>
+        </a>
       </div>
     </div>
 
@@ -50,13 +51,63 @@ const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
         <Icon name="mdi:bus" />
       </div>
       <div
-        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-comillas cursor-pointer text-end animate__animated animate__backInLeft dark:hover:bg-green-100" title="Picha para ubicacion"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-comillas cursor-pointer text-end animate__animated animate__backInLeft time-border"
+        title="Picha para ubicacion"
       >
-        <h3 class="mb-3 font-bold text-gray-800 text-xl ">12:15 - Comillas</h3>
+        <a href={linkBusComillas} target="_blank">
+          <h3 class="mb-3 font-bold text-gray-800 text-xl">Comillas</h3>
+          <p
+            class="text-sm font-medium leading-snug tracking-wide text-gray-800text-opacity-100"
+          >
+            Salida a las <strong>00:00</strong> desde la parada del autobus a lado
+            del palacio.
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <!-- right timeline -->
+    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
+      >
+        <Icon name="mdi:bus" />
+      </div>
+      <div
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe cursor-pointer animate__animated animate__backInRight time-border"
+        title="Picha para ubicacion"
+      >
+        <a href={linkBusCabe} target="_blank">
+          <h3 class="mb-3 font-bold text-gray-800 text-xl">Cabezon</h3>
+          <p
+            class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+          >
+            Salida a las <strong>00:00</strong> desde la parada del autobus enfrente
+            del restaurante el Cruze.
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <!-- left timeline -->
+    <div
+      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline text-end"
+    >
+      <div class="order-1 w-5/12"></div>
+      <div
+        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
+      >
+        <Icon name="emojione-monotone:party-popper" />
+      </div>
+      <div
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 animate__animated animate__backInLeft"
+      >
+        <h3 class="mb-3 font-bold text-xl">Boda</h3>
         <p
-          class="text-sm font-medium leading-snug tracking-wide text-gray-800text-opacity-100"
+          class="text-sm font-medium leading-snug tracking-widetext-opacity-100"
         >
-          Parada del autobus
+          <strong>00:00</strong> ¡Que empiece la fiesta!
         </p>
       </div>
     </div>
@@ -70,76 +121,27 @@ const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
         <Icon name="mdi:bus" />
       </div>
       <div
-        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe cursor-pointer animate__animated animate__backInRight dark:hover:bg-green-100" title="Picha para ubicacion"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe animate__animated animate__backInRight"
       >
-        <h3 class="mb-3 font-bold text-gray-800 text-xl">12:45 - Cabezon</h3>
+        <h3 class="mb-3 font-bold text-gray-800 text-xl">Bus vuelta</h3>
         <p
           class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
         >
-          Parada del autobus
+          Salida a las <strong>00:00</strong> desde el restaurante. Autobus de vuelta
+          que hara parada en los mismos sitios que la ida.
         </p>
       </div>
     </div>
-
-    <!-- left timeline -->
-    <div
-      class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline text-end "
-    >
-      <div class="order-1 w-5/12"></div>
-      <div
-        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
-      >
-        <Icon name="emojione-monotone:party-popper" />
-      </div>
-      <div class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 animate__animated animate__backInLeft">
-        <h3 class="mb-3 font-bold text-xl">13:30 Boda</h3>
-        <p
-          class="text-sm font-medium leading-snug tracking-widetext-opacity-100"
-        >
-          ¡Que empiece la fiesta!
-        </p>
-      </div>
-    </div>
-
-  <!-- right timeline -->
-    <div class="mb-8 flex justify-between items-center w-full right-timeline">
-      <div class="order-1 w-5/12"></div>
-      <div
-        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
-      >
-        <Icon name="mdi:bus" />
-      </div>
-      <div
-        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe animate__animated animate__backInRight" title="Picha para ubicacion"
-      >
-        <h3 class="mb-3 font-bold text-gray-800 text-xl">00:00 - Bus vuelta</h3>
-        <p
-          class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
-        >
-          Autobus de vuelta parando mismo sitio que la ida
-        </p>
-      </div>
-    </div>
-
   </div>
-
-
 </section>
 
-<script define:vars={{ linkBusSanvi, linkBusComillas, linkBusCabe }}>
-  document.querySelector(".bus-sanvi").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.open(linkBusSanvi, "_blank");
-  });
+<style lang="scss">
+  .time-border {
+    border: 2px solid white;
+    transition: border-color 0.5s ease;
 
-  document
-    .querySelector(".bus-comillas")
-    .addEventListener("click", function (e) {
-      e.preventDefault();
-      window.open(linkBusComillas, "_blank");
-    });
-  document.querySelector(".bus-cabe").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.open(linkBusCabe, "_blank");
-  });
-</script>
+    &:hover {
+      border-color: green;
+    }
+  }
+</style>
