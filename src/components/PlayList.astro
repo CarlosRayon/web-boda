@@ -1,0 +1,43 @@
+---
+import PlayListIframe from "./parts/PlayListIframe.astro";
+import TitleSection from "./parts/TitleSection.astro";
+import { Icon } from "astro-icon";
+---
+
+<section class="container">
+  <TitleSection title="Playlist colaborativa" toUpper />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 place-content-center">
+    <div class="grid place-content-center p-5">
+      <p>
+        El día de nuestra boda no podemos dejar que algo tan necesario como la
+        música no os guste, o que nos dejemos el temazo que marcó nuestras
+        vidas.
+      </p>
+      <p>
+        Queremos hacer una lista de canciones que sea única y personalizada
+        según nuestros gustos así que, si te animas, te dejamos que añadas la
+        canción o canciones que te dé la gana. Sigue los siguientes pasos:
+      </p>
+
+      <ol class="list-decimal p-3 ps-7">
+        <li>
+          Pulsar en este <a
+            href="https://www.youtube.com/playlist?list=PLn6psApLjE88WUhspeTS_TM489Uxgb4Xi&jct=qhtRw-fBoNH14l7WPKY4DJXpdyIzxg"
+            target="_blank"
+            class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+            >enlace</a
+          > que te llevara a YouTube
+        </li>
+        <li>Acepta que quires colaborar con la lista de reproduccion</li>
+        <li>
+          La lista reproduccion pasara pertener a tus lista de reproducion.
+          Ya puedes añadir las canciones que quieras a la lista.
+        </li>
+      </ol>
+    </div>
+    <div class="grid p-5">
+      <PlayListIframe />
+    </div>
+  </div>
+</section>
