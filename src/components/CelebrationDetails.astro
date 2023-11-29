@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon";
 ---
 
-<section class="container celebration grid grid-cols-1 lg:grid-cols-2 gap-11">
+<section class="container celebration grid grid-cols-1 lg:grid-cols-2 gap-10">
   <div class="flex justify-center items-center flex-col">
     <div class="circle-icon">
       <Icon
@@ -52,6 +52,10 @@ import { Icon } from "astro-icon";
 
   .celebration {
     padding: 50px 0;
+    background-image: url(../../public/assets/images/fondo.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   .celebration__title {
