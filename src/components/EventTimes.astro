@@ -2,9 +2,9 @@
 import TitleSection from "./parts/TitleSection.astro";
 import { Icon } from "astro-icon";
 
-const linkBusSanvi = import.meta.env.PUBLIC_LINK_BUS_SANVI;
-const linkBusComillas = import.meta.env.PUBLIC_LINK_BUS_COMILLAS;
-const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
+const linkBusSanvi = "https://maps.app.goo.gl/TGGSAvEw5kGTo6YXA";
+const linkBusComillas = "https://maps.app.goo.gl/wRc5VoVHtYgJjWde6";
+const linkBusCabe = "https://maps.app.goo.gl/3WpvN7QAuhtp1AVK8";
 ---
 
 <!-- component -->
@@ -101,7 +101,7 @@ const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
         <Icon name="emojione-monotone:party-popper" />
       </div>
       <div
-        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 animate__animated animate__backInLeft"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 animate__animated animate__backInLeft time-border-simple"
       >
         <h3 class="mb-3 font-bold text-xl">Boda</h3>
         <p
@@ -113,7 +113,7 @@ const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
     </div>
 
     <!-- right timeline -->
-    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+    <div class="mb-8 flex justify-between items-center w-full right-timeline ">
       <div class="order-1 w-5/12"></div>
       <div
         class="z-20 flex items-center order-1 shadow-xl w-8 h-8 p-1 rounded-full bg-white"
@@ -121,7 +121,7 @@ const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
         <Icon name="mdi:bus" />
       </div>
       <div
-        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe animate__animated animate__backInRight"
+        class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 bus-cabe animate__animated animate__backInRight time-border-simple"
       >
         <h3 class="mb-3 font-bold text-gray-800 text-xl">Bus vuelta</h3>
         <p
@@ -136,12 +136,18 @@ const linkBusCabe = import.meta.env.PUBLIC_LINK_BUS_CABE;
 </section>
 
 <style lang="scss">
+
+.time-border-simple{
+   background-color: white;
+    border: 2px solid #f1e2c9;
+}
   .time-border {
-    border: 2px solid white;
+    background-color: white;
+    border: 2px solid #f1e2c9;
     transition: border-color 0.5s ease;
 
     &:hover {
-      border-color: green;
+      border-color: #506326;
     }
   }
 </style>

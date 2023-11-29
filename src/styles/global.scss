@@ -1,22 +1,13 @@
 @import "./variables/_color.scss";
 @import "./mixins/_fonts.scss";
-@import "./mixins/_media-query.scss";
 
 * {
     @include mx-font-barlow;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @include mx-font-gilda;
-}
-
 body {
     min-height: 100vh;
+    background-color: #f5f4ee;
 }
 
 p {
@@ -24,14 +15,11 @@ p {
 }
 
 .space-section {
-    padding: 15px 0;
+    background-color: $color-light-yellow;
+    height: 1px;
+    padding: 2px 0;
 }
 
-
-body {
-    background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/s0f82a6df06b96e1c/backgroundarea/idbd146e0e33d4aad/version/1518451959/image.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+.font-start-midnight {
+    @include mx-font-start-midnight;
 }

@@ -7,22 +7,32 @@ import EventTimes from "../components/EventTimes.astro";
 import Footer from "../components/Footer.astro";
 import ConfirmAssistance from "../components/ConfirmAssistance.astro";
 import PlayList from "../components/PlayList.astro";
+import HelpUs from "../components/HelpUs.astro";
+import Icon from "../components/Icon.astro";
+import CoverPhrase from "../components/CoverPhrase.astro";
 ---
 
 <Layout title="Boda de Carlos e Inés">
-  <main class="container-lg">
+  <main class="container-lg h-screen">
     <Header />
     <div class="space-section"></div>
-    <About />
+    <CoverPhrase />
     <div class="space-section"></div>
-    <EventLocation />
+       <EventTimes />
+
+    <!-- <div class="space-section"></div>
+   <About />
     <div class="space-section"></div>
+
+      <div class="space-section"></div>
     <EventTimes />
     <div class="space-section"></div>
     <ConfirmAssistance />
     <div class="space-section"></div>
     <PlayList />
     <div class="space-section"></div>
-    <Footer autor="Carlos Rayón Álvarez" />
+    <HelpUs />
+    <div class="space-section"></div>
+    <Footer autor="Carlos Rayón Álvarez" /> -->
   </main>
 </Layout>
