@@ -1,6 +1,28 @@
----
----
-
-<header class='py-5'>
-    <img class='object-contain mx-auto' src='https://dummyimage.com/600x200/000/fff.png&text=600x200+-+Logo' alt='Boda de Inés y Carlos' />
+<header class="header">
+  <img
+    class="header__image"
+    src="../../public/assets/images/logo_fecha.png"
+    alt="Boda de Inés y Carlos"
+  />
 </header>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../public/assets/images/fondo.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .header__image {
+    max-width: 100%;
+    height: auto;
+
+    @media (min-width: 1000px) {
+      max-width: 40%;
+    }
+  }
+</style>

@@ -1,21 +1,21 @@
 ---
 import TitleSection from "./parts/TitleSection.astro";
-import MapIframe from "./parts/maps/MapIframe.astro";
+import MapIframe from "./parts/MapIframe.astro";
 ---
 
 <section class="container">
   <TitleSection title="¿Donde nos casamos?" toUpper />
 
-  <div class="grid grid-cols-1 md:grid-cols-2 place-content-center">
+  <div class="grid grid-cols-1 md:grid-cols-2 place-content-center m-3 rounded-lg">
     <div class="grid p-5 order-2 md:order-1">
-      <MapIframe />
-    </div>
-    <div class="grid place-content-center p-5 order-1 md:order-2">
       <p>
         La boda se celebrará en el Restaurante Los Molinos de Ruente. En la
         poblacion de Ruente (Cantabria), un pueblo del valle de Cabuérniga
         cercano a Cabezón de la Sal.
       </p>
+
+      <MapIframe />
     </div>
+    <div class="grid place-content-center p-5 order-1 md:order-2 m-3 rounded-lg"></div>
   </div>
 </section>
