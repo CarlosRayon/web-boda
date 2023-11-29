@@ -23,3 +23,19 @@ p {
 .font-start-midnight {
     @include mx-font-start-midnight;
 }
+
+.circle-icon {
+    width: 200px;
+    height: 200px;
+    background-color: $color-light-beige;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-gold;
+    padding: 46px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(162, 9, 9, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
