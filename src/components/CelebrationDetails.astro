@@ -1,106 +1,142 @@
 ---
 import { Icon } from "astro-icon";
+import Modal from "./parts/Modal.astro";
+import MapIframe from "./parts/MapIframe.astro";
+import EventTimes from "./EventTimes.astro";
 ---
 
-<section class="container celebration grid grid-cols-1 lg:grid-cols-2 gap-10">
-  <div class="flex justify-center items-center flex-col">
-    <div class="circle-icon">
-      <Icon
-        name="la:ring"
-        class="animate__animated animate__bounce animate__infinite infinite animate__slow"
-      />
+<div class="celebration-wrapper">
+  <section class="container celebration grid grid-cols-1">
+    <div class="flex justify-center items-center flex-col">
+      <div class="circle-icon">
+        <Icon name="la:ring" class="animate-ring" />
+      </div>
+
+      <h2 class="celebration__title font-start-midnight">Boda y Celebración</h2>
+
+      <div class="celebration__info">
+        <h3>Dia</h3>
+        <p>Sabado 15 de Junio - 13h</p>
+        <button id="openModalAssistence" class="button-link"
+          >Confirmar Asistencia</button
+        >
+
+        <div class="celebration__info">
+          <h3>Lugar</h3>
+          <p>Restaurante Los Molinos de Ruente</p>
+          <button id="openModalMap" class="button-link">¿Donde es?</button>
+        </div>
+
+        <div class="celebration__info">
+          <h3>Autobus</h3>
+          <p>Horario autobus para invitados</p>
+          <button id="openModalBusschedules" class="button-link"
+            >Ver horarios</button
+          >
+        </div>
+      </div>
     </div>
 
-    <h2 class="celebration__title font-start-midnight">Boda</h2>
+    <Modal
+      id="modalAssitence"
+      open="openModalAssistence"
+      close="closeModalAssintece"
+      title="Confirmar Asistencia"
+    >
+      <div class="flex justify-center items-center flex-col" slot="body">
+        <img src="/assets/images/logo_fecha.png" alt="" class="w-40" />
+        <p class="text-center">
+          Por favor, rellena el siguiente formulario para confirmar tu
+          asistencia a la boda.
+        </p>
+      </div>
+      <a href="" target="blank" class="button-link" slot="footer"
+        >Rellena formulario</a
+      >
+    </Modal>
 
-    <div class="celebration__info">
-      <h3>Dia</h3>
-      <p>Sabado 15 de Junio - 13h</p>
-      <a href="#" class="button-link">Confirmar Asistencia</a>
-    </div>
+    <Modal
+      id="modalMap"
+      open="openModalMap"
+      close="closeModalMap"
+      title="¿Como llegar a la ceremonia?"
+    >
+      <MapIframe slot="body" />
+      <a
+        href="https://www.google.com/maps/place/Los+Molinos+de+Ruente,+Barrio+monasterio,+Ruente,+Cantabria,+39513+Ruente,+Cantabria/@43.26067,-4.264895,17z/data=!4m6!3m5!1s0xd490f9abb75d487:0xdb9c06f0841bc448!8m2!3d43.26067!4d-4.264895!16s%2Fg%2F11cn9v1_8p"
+        target="blank"
+        class="button-link"
+        slot="footer">Ampliar Mapa</a
+      >
+    </Modal>
 
-    <div class="celebration__info">
-      <h3>Lugar</h3>
-      <p>Restaurante Los Molinos de Ruente</p>
-      <a href="#" class="button-link">¿Donde esta?</a>
-    </div>
-  </div>
+    <Modal
+      id="modalBusSchedules"
+      open="openModalBusschedules"
+      close="closeModalBusschedules"
+      title="Horarios de autobus"
+    >
+      <div class="flex justify-center items-center flex-col" slot="body">
+        <img src="/assets/images/logo_fecha.png" alt="" class="w-40" />
+        <p class="text-center">
+          Horarios autobues
+        </p>
+        <EventTimes />
+      </div>
+    </Modal>
 
-  <div class="flex justify-center items-center flex-col mt-10 lg:mt-0">
-    <div class="circle-icon">
-      <Icon
-        name="mdi:party-popper"
-        class="animate__animated animate__bounce animate__infinite infinite animate__slow"
-      />
-    </div>
-    <h2 class="celebration__title font-start-midnight">Celebración</h2>
-    <div class="celebration__info">
-      <h3>Otra</h3>
-      <p>Otra cosa</p>
-      <a href="#" class="button-link">Link otra cosa</a>
-    </div>
-    <div class="celebration__info">
-      <h3>Otra</h3>
-      <p>Otra cosa</p>
-      <a href="#" class="button-link">Link otra cosa</a>
-    </div>
-  </div>
-</section>
+    <style lang="scss">
+      @import "../styles/variables/_color.scss";
 
-<style lang="scss">
-  @import "../styles/variables/_color.scss";
+      .celebration-wrapper {
+        background-image: url(../../public/assets/images/fondo.webp);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .celebration {
+        padding: 50px 0;
+      }
 
-  .celebration {
-    padding: 50px 0;
-    background-image: url(../../public/assets/images/fondo.webp);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+      .celebration__title {
+        text-align: center;
+        background-color: var(--color-gold);
+        border-radius: 10% 54% 35% 10% / 10% 31% 10% 32%;
+        min-width: 50%;
+        color: white;
+        font-size: 4rem;
+        letter-spacing: 5px;
+        padding: 0 10px;
+      }
 
-  .celebration__title {
-    text-align: center;
-    background-color: $color-gold;
-    border-radius: 10% 54% 35% 10% / 10% 31% 10% 32%;
-    min-width: 50%;
-    color: white;
-    font-size: 4rem;
-    letter-spacing: 5px;
-    padding: 0 10px;
-  }
+      .celebration__info {
+        padding: 15px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        gap: 18px;
+        h3 {
+          color: $color-dark-green;
+          font-size: 2rem;
+        }
 
-  .celebration__info {
-    padding: 15px 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    gap: 18px;
-    h3 {
-      color: $color-dark-red;
-      font-size: 2rem;
-    }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .animate-ring {
+        animation: ring 7s linear infinite;
+      }
 
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
-  .button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: $color-dark-red;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.5s ease;
-    border-radius: 30px;
-    width: 200px;
-  }
-
-  .button-link:hover {
-    background-color: inherit;
-    color: $color-dark-red;
-    border: 1px solid $color-gold;
-  }
-</style>
+      @keyframes ring {
+        0% {
+          transform: rotateY(odeg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+  </section>
+</div>

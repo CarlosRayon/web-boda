@@ -1,39 +1,96 @@
-<!-- Botón para abrir el modal -->
-<button id="openModal" class="px-4 py-2 bg-blue-500 text-white rounded"
-  >Open Modal</button
->
+---
+import Icon from "astro-icon";
+const { title, id, open, close } = Astro.props;
+---
 
-<!-- Modal -->
 <div
-  id="myModal"
-  class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden"
+  id={id}
+  class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center hidden animate__animated animate__fadeIn bg-black bg-opacity-50"
 >
-  <div
-    class="bg-white rounded shadow-lg p-8 m-4 max-w-xs max-h-full text-center relative"
-  >
-    <button
-      id="closeModal"
-      class="absolute top-0 right-0 m-4 text-2xl font-bold cursor-pointer"
-      >X</button
-    >
-    <h1 class="text-2xl">Modal Title</h1>
-    <p class="text-gray-500">This is a modal.</p>
-    <!-- <button id="closeModal" class="mt-4 px-4 py-2 bg-red-500 text-white rounded"
-      >Close</button
-    > -->
+  <div class="modal__content rounded relative">
+    <button id={close} class="close-modal">
+      <Icon name="mdi:close" class="close-icon" />
+    </button>
+
+    <div class="modal__title">
+      <h1 slot="title">{title}</h1>
+    </div>
+
+    <div class="modal__body">
+      <slot name="body" />
+    </div>
+
+    <div class="modal__footer">
+      <slot name="footer" />
+    </div>
   </div>
 </div>
 
-<script>
-  const openModal = document.getElementById("openModal");
-  const closeModal = document.getElementById("closeModal");
-  const myModal = document.getElementById("myModal");
+<style lang="scss">
+  @import "../../styles/variables/_color.scss";
+
+  .modal {
+    .modal__content {
+      width: 100%;
+      max-width: 600px;
+      padding: 2rem;
+      text-align: center;
+      background-image: url(../../public/assets/images/fondo.webp);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .modal__title {
+      h1 {
+        margin-bottom: 1rem;
+        color: $color-dark-green;
+        font-weight: 700;
+        font-size: 1.9rem;
+      }
+    }
+
+    .modal__footer {
+      margin-top: 30px;
+    }
+    .close-modal {
+      position: absolute;
+      top: 5px;
+      right: 7px;
+      border-radius: 50%;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 5px;
+      background-color: $color-gold;
+      cursor: pointer;
+      .close-icon {
+        height: 20px;
+        color: white;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
+
+<script define:vars={{ id: id, open: open, close: close }}>
+  const openModal = document.getElementById(open);
+  const closeModal = document.getElementById(close);
+  const modal = document.getElementById(id);
 
   openModal.addEventListener("click", function () {
-    myModal.classList.remove("hidden");
+    modal.classList.remove("hidden");
+    modal.classList.add("show");
   });
 
   closeModal.addEventListener("click", function () {
-    myModal.classList.add("hidden");
+    modal.classList.add("hidden");
+    modal.classList.remove("show");
   });
 </script>
