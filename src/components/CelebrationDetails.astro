@@ -24,7 +24,7 @@ import EventTimes from "./EventTimes.astro";
         <div class="celebration__info">
           <h3>Lugar</h3>
           <p>Restaurante Los Molinos de Ruente</p>
-          <button id="openModalMap" class="button-link">¿Donde es?</button>
+          <button id="openModalMap" class="button-link">¿Como llegar?</button>
         </div>
 
         <div class="celebration__info">
@@ -44,14 +44,17 @@ import EventTimes from "./EventTimes.astro";
       title="Confirmar Asistencia"
     >
       <div class="flex justify-center items-center flex-col" slot="body">
-        <img src="/assets/images/logo_fecha.png" alt="" class="w-40" />
+        <img src="/assets/images/logo_fecha.png" alt="" style="width: 230px" />
         <p class="text-center">
           Por favor, rellena el siguiente formulario para confirmar tu
           asistencia a la boda.
         </p>
       </div>
-      <a href="" target="blank" class="button-link" slot="footer"
-        >Rellena formulario</a
+      <a
+        href="https://forms.gle/wC1YCB5a192zDwQE6"
+        target="blank"
+        class="button-link"
+        slot="footer">Rellena formulario</a
       >
     </Modal>
 
@@ -78,9 +81,7 @@ import EventTimes from "./EventTimes.astro";
     >
       <div class="flex justify-center items-center flex-col" slot="body">
         <img src="/assets/images/logo_fecha.png" alt="" class="w-40" />
-        <p class="text-center">
-          Horarios autobues
-        </p>
+        <p class="text-center">Horarios autobues</p>
         <EventTimes />
       </div>
     </Modal>
@@ -101,12 +102,16 @@ import EventTimes from "./EventTimes.astro";
       .celebration__title {
         text-align: center;
         background-color: var(--color-gold);
-        border-radius: 10% 54% 35% 10% / 10% 31% 10% 32%;
+        border-radius: 5px 20px 5px;
         min-width: 50%;
         color: white;
         font-size: 4rem;
         letter-spacing: 5px;
         padding: 0 10px;
+        margin: 0 10px;
+        @media (max-width: 540px) {
+          font-size: 3rem;
+        }
       }
 
       .celebration__info {
@@ -126,7 +131,7 @@ import EventTimes from "./EventTimes.astro";
         }
       }
       .animate-ring {
-        animation: ring 7s linear infinite;
+        // animation: ring 7s linear infinite;
       }
 
       @keyframes ring {
