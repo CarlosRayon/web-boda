@@ -7,7 +7,7 @@
 
 body {
     min-height: 100vh;
-    background-color: #f5f4ee;
+    background-color: $color-bg-beige;
 }
 
 p {
@@ -29,6 +29,7 @@ p {
     height: 200px;
     background-color: $color-light-beige;
     border-radius: 50%;
+    border: 1px solid $color-gold;
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
@@ -62,7 +63,7 @@ p {
 }
 
 .button-link:hover {
-    background-color: inherit;
+    background-color: $color-bg-beige;
     color: $color-dark-green;
     border: 1px solid $color-gold;
 }

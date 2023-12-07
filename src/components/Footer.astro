@@ -7,7 +7,7 @@ interface Props {
 const { autor } = Astro.props;
 ---
 
-<div class='footer mt-56'>
+<div class='footer'>
     <p>&copy {autor}</p>
 </div>
 
@@ -15,5 +15,6 @@ const { autor } = Astro.props;
     .footer {
         display: grid;
         place-items: center;
+        height: 200px;
     }
 </style>
