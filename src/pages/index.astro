@@ -1,16 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import CoverPhrase from "../components/CoverPhrase.astro";
+import CelebrationDetails from "../components/CelebrationDetails.astro";
+import Party from "../components/Party.astro";
+import Footer from "../components/Footer.astro";
 import About from "../components/AboutUs.astro";
 import EventLocation from "../components/EventLocation.astro";
 import EventTimes from "../components/EventTimes.astro";
-import Footer from "../components/Footer.astro";
 import ConfirmAssistance from "../components/ConfirmAssistance.astro";
-import PlayList from "../components/PlayList.astro";
 import HelpUs from "../components/HelpUs.astro";
-import CoverPhrase from "../components/CoverPhrase.astro";
 import Modal from "../components/parts/Modal.astro";
-import CelebrationDetails from "../components/CelebrationDetails.astro";
 ---
 
 <Layout title="Boda de Carlos e Inés">
@@ -20,6 +20,8 @@ import CelebrationDetails from "../components/CelebrationDetails.astro";
     <CoverPhrase />
     <div class="space-section"></div>
     <CelebrationDetails />
+    <div class="space-section"></div>
+    <Party />
     <div class="space-section"></div>
     <Footer autor="Carlos Rayón Álvarez" />
 

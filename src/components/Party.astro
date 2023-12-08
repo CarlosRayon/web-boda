@@ -1,0 +1,97 @@
+---
+import Icon from "astro-icon";
+import PlayListIframe from "./parts/PlayListIframe.astro";
+import Modal from "./parts/Modal.astro";
+---
+
+<section class="party container grid grid-cols-1 md:grid-cols-2 gap-7">
+  <div
+    class="party__block party__block--playlist flex justify-center items-center flex-col shadow-lg"
+  >
+    <h2 class="title-block my-6">Música</h2>
+
+    <div class="circle-icon party__circle-icon">
+      <Icon
+        name="mdi:music"
+        class="animate__animated animate__jello animate__infinite animate__slow"
+      />
+    </div>
+
+    <div class="party__text">
+      <p>¿Cuál es la canción que no debe faltar en la playlist de la fiesta?</p>
+    </div>
+
+    <button id="openModalPlayList" class="button-link party__button"
+      >Colabora</button
+    >
+  </div>
+
+  <div
+    class="party__block party__block--tips flex justify-center items-center flex-col shadow-lg"
+  >
+    <h2 class="title-block my-6">Tips y Notas</h2>
+
+    <div class="circle-icon party__circle-icon">
+      <Icon
+        name="mdi:book-edit-outline"
+        class="animate__animated animate__rubberBand animate__infinite animate__slower"
+      />
+    </div>
+    <div class="party__text">
+      <p>
+        Informacion adicional para los invitados. Peluquerias, tiendas, donde
+        comer...
+      </p>
+    </div>
+
+    <button id="openModalTips" class="button-link party__button"
+      >Descubrir</button
+    >
+  </div>
+
+  <Modal
+    id="modalPlayList"
+    open="openModalPlayList"
+    close="closeModalPlayList"
+    title="Sugerir una cancion"
+  >
+   <PlayListIframe slot="body"/>
+    <a
+      href="https://www.youtube.com/playlist?list=PLn6psApLjE88WUhspeTS_TM489Uxgb4Xi&jct=qhtRw-fBoNH14l7WPKY4DJXpdyIzxg"
+      target="blank"
+      class="button-link"
+      slot="footer">Añadir cancion</a
+    >
+  </Modal>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables/_color.scss";
+
+.party{
+padding: 60px 20px;
+}
+  .party__block {
+    height: 100%;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: $color-light-beige;
+    color: $color-dark-green;
+  }
+
+  .party__text {
+    text-align: center;
+    margin-bottom: 2rem;
+    height: 50px;
+  }
+
+  .party__button {
+    margin-bottom: 2rem;
+  }
+
+  .party__circle-icon {
+    width: 160px;
+    height: 160px;
+    padding: 30px;
+  }
+</style>

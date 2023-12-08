@@ -36,9 +36,7 @@ p {
     align-items: center;
     color: $color-gold;
     padding: 30px;
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(162, 9, 9, 0.75);
-    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 30%);
 
     @media (max-width: 540px) {
         width: 150px;
@@ -66,4 +64,14 @@ p {
     background-color: $color-bg-beige;
     color: $color-dark-green;
     border: 1px solid $color-gold;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.title-block {
+    font-weight: bold;
+    font-size: 2rem;
+    color: $color-dark-green;
 }
