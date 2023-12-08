@@ -1,17 +1,50 @@
-<div class="iframe-responsive">
-  <iframe
-    src="https://www.youtube.com/embed/videoseries?si=22ZbB6M7UziTDnQ5&list=PLn6psApLjE88WUhspeTS_TM489Uxgb4Xi"
-    width="600"
-    height="450"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-  >
-  </iframe>
-</div>
+<section class="playlist">
+  <div class="playlist__text">
+    <p>
+      Queremos hacer una lista de canciones que sea única y personalizada según
+      nuestros gustos así que, si te animas, te dejamos que añadas la canción o
+      canciones que te dé la gana.
+    </p>
+  </div>
+
+  <div class="playlist__iframe iframe-responsive">
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?si=22ZbB6M7UziTDnQ5&list=PLn6psApLjE88WUhspeTS_TM489Uxgb4Xi"
+      width="500"
+      height="350"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    >
+    </iframe>
+  </div>
+
+  <div class="playlist__help">
+    <ol class="list-decimal text-start">
+      <li>Pulsa el boton de "Añadir cancion" *</li>
+      <li>Acepta que quires colaborar con la lista de reproduccion</li>
+      <li>
+        La lista reproduccion pasara pertener a tus lista de reproducion. Ya
+        puedes añadir las canciones que quieras a la lista.
+      </li>
+    </ol>
+
+    <small class="playlist__small"
+      >* Tienes que tener cuenta gmail y estar logeado en YouTube</small
+    >
+  </div>
+</section>
 
 <style>
+  .playlist__iframe {
+    margin: 20px 0;
+  }
+
+  .playlist__small {
+display: block;
+    padding-top: 15px;
+  }
   .iframe-responsive {
     padding: 5px;
     overflow: hidden;
