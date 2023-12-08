@@ -1,5 +1,6 @@
 @import "./variables/_color.scss";
 @import "./mixins/_fonts.scss";
+@import "scrollbar.scss";
 
 * {
     @include mx-font-barlow;
@@ -8,6 +9,7 @@
 body {
     min-height: 100vh;
     background-color: $color-bg-beige;
+
 }
 
 p {

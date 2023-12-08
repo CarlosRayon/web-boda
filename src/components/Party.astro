@@ -1,7 +1,8 @@
 ---
 import Icon from "astro-icon";
-import PlayListIframe from "./parts/PlayListIframe.astro";
+import Tips from "./parts/Tips.astro";
 import Modal from "./parts/Modal.astro";
+import PlayListIframe from "./parts/PlayListIframe.astro";
 ---
 
 <section class="party container grid grid-cols-1 md:grid-cols-2 gap-7">
@@ -62,6 +63,17 @@ import Modal from "./parts/Modal.astro";
       class="button-link"
       slot="footer">Añadir cancion</a
     >
+  </Modal>
+
+  <Modal
+    id="modalTips"
+    open="openModalTips"
+    close="closeModaltips"
+    title="Tips y notas"
+  >
+    <div class="flex justify-center items-center flex-col" slot="body">
+      <Tips />
+    </div>
   </Modal>
 </section>
 
