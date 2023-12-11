@@ -47,6 +47,13 @@ p {
     }
 }
 
+    .wrapper-background {
+      background-image: url(../../public/assets/images/fondo.webp);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
 
 .button-link {
     display: inline-block;
@@ -60,6 +67,8 @@ p {
     width: 250px;
     font-weight: bold;
     letter-spacing: 2px;
+    text-align: center;
+text-transform: uppercase;;
 }
 
 .button-link:hover {

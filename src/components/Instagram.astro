@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="wrapper-background">
+  <section class="container instagram grid grid-cols-1">
+    <div class="flex justify-center items-center flex-col">
+      <div class="circle-icon">
+        <Icon
+          name="mdi:instagram"
+          class="animate__animated animate__pulse animate__infinite animate__slow"
+        />
+      </div>
+
+      <div class="instagram__info">
+        <h2 class="title-block">Compartimos este día junto a ti</h2>
+        <p>Comparte tus fotos y vídeos de este hermoso día</p>
+        <a
+          href="https://www.instagram.com/?hl=es"
+          target="_blank"
+          class="button-link">ver en instagram</a
+        >
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  @import "../styles/variables/_color.scss";
+
+  .instagram {
+    padding: 50px 0;
+  }
+  .instagram__info {
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 18px;
+
+    h3 {
+      color: $color-dark-green;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+</style>

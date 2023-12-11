@@ -116,8 +116,18 @@ const { title, id, open, close } = Astro.props;
   });
 
   closeModal.addEventListener("click", function () {
-    modal.classList.add("hidden");
-    modal.classList.remove("show");
-    document.body.classList.remove("modal-open");
+    closeModalEvent(modal);
   });
+
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+    closeModalEvent(modal);
+    }
+  });
+
+function closeModalEvent(element) {
+  element.classList.add("hidden");
+  element.classList.remove("show");
+  document.body.classList.remove("modal-open");
+}
 </script>

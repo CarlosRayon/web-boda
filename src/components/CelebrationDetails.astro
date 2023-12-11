@@ -5,7 +5,7 @@ import MapIframe from "./parts/MapIframe.astro";
 import EventTimes from "./parts/EventTimes.astro";
 ---
 
-<div class="celebration-wrapper">
+<div class="wrapper-background">
   <section class="container celebration grid grid-cols-1">
     <div class="flex justify-center items-center flex-col">
       <div class="circle-icon">
@@ -24,7 +24,7 @@ import EventTimes from "./parts/EventTimes.astro";
         <div class="celebration__info">
           <h2 class="title-block">Lugar</h2>
           <p>Restaurante Los Molinos de Ruente</p>
-          <button id="openModalMap" class="button-link">¿Como llegar?</button>
+          <button id="openModalMap" class="button-link">Como llegar</button>
         </div>
 
         <div class="celebration__info">
@@ -87,12 +87,7 @@ import EventTimes from "./parts/EventTimes.astro";
   <style lang="scss">
     @import "../styles/variables/_color.scss";
 
-    .celebration-wrapper {
-      background-image: url(../../public/assets/images/fondo.webp);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
+
     .celebration {
       padding: 50px 0;
     }
