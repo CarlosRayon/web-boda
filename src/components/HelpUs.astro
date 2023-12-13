@@ -1,30 +1,76 @@
 ---
-import TitleSection from "./parts/TitleSection.astro";
-
+import Icon from "astro-icon";
+import Modal from "./parts/Modal.astro";
+import ClipBoard from "./parts/ClipBoard.astro";
+import Slider from "./parts/Slider.astro";
 ---
 
-<section class="container">
-  <TitleSection title="¡Ayudanos a llegar lejos!" toUpper />
+<section class="helpus container grid grid-cols-1 gap7 place-items-center">
+  <div
+    class="helpus__block helpus__block--playlist flex justify-center items-center flex-col shadow-lg"
+  >
+    <h2 class="title-block my-6">Ayudanos a llegar lejos</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 place-content-center">
-    <div class="grid p-5 order-2 md:order-1">
-      <img
-        class="object-contain rounded-lg"
-        src="../../public/assets/images/reunion.jpg"
-        alt="imagen 1"
-      />
-
-
+    <div class="circle-icon helpus__circle-icon">
+      <Icon name="subway:world" class="animate-rotate" />
     </div>
-    <div class="grid place-content-center p-5 order-1 md:order-2">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsa
-        cumque aliquid sint placeat minus amet delectus quis, dolore, rem
-        nesciunt doloremque, totam culpa veniam impedit praesentium tenetur
-        similique nobis.
-      </p>
 
-      <h2 class="text-center text-xl mt-5">ES8321033107119773767290</h2>
+    <div class="helpus__text">
+      <p>Nos gustaria ir de vieje de novio lejos, muy lejos..</p>
+      <p>¿Nos ayudas a consegirlo</p>
     </div>
+
+    <button id="openModalHelpUs" class="button-link helpus__button"
+      >Ayudanos</button
+    >
   </div>
 </section>
+
+<Modal
+  id="modalHelpUs"
+  open="openModalHelpUs"
+  close="closeModalHelpUs"
+  title="Ayudanos a llegar lejos"
+>
+  <div class="flex justify-center items-center flex-col" slot="body">
+    <p class="text-center mb-4">
+      Queremos llegar hasta las Islas Reunion y Mauricio. ¡Cualquier ayuda es
+      bienvenida!
+    </p>
+
+    <Slider />
+
+    <ClipBoard id="iban" text="ES36 2100 1649 1302 0025 8411" client:visible />
+  </div>
+</Modal>
+
+<style lang="scss">
+  @import "../styles/variables/_color.scss";
+  .helpus {
+    padding: 60px 20px;
+  }
+  .helpus__block {
+    max-width: 80;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: $color-light-beige;
+    color: $color-dark-green;
+  }
+
+  .helpus__text {
+    text-align: center;
+    margin-bottom: 2rem;
+    height: 60px;
+  }
+
+  .helpus__button {
+    margin-bottom: 2rem;
+  }
+
+  .helpus__circle-icon {
+    width: 160px;
+    height: 160px;
+    padding: 30px;
+  }
+</style>

@@ -9,7 +9,10 @@ import EventTimes from "./parts/EventTimes.astro";
   <section class="container celebration grid grid-cols-1">
     <div class="flex justify-center items-center flex-col">
       <div class="circle-icon">
-        <Icon name="la:ring" class="animate__animated animate__pulse animate__infinite animate__slow" />
+        <Icon
+          name="la:ring"
+          class="animate__animated animate__pulse animate__infinite animate__slow"
+        />
       </div>
 
       <h2 class="celebration__title font-start-midnight">Boda y Celebración</h2>
@@ -87,7 +90,6 @@ import EventTimes from "./parts/EventTimes.astro";
   <style lang="scss">
     @import "../styles/variables/_color.scss";
 
-
     .celebration {
       padding: 50px 0;
     }
@@ -121,18 +123,6 @@ import EventTimes from "./parts/EventTimes.astro";
 
       p {
         font-size: 1.5rem;
-      }
-    }
-    .animate-ring {
-      // animation: ring 7s linear infinite;
-    }
-
-    @keyframes ring {
-      0% {
-        transform: rotateY(odeg);
-      }
-      100% {
-        transform: rotateY(360deg);
       }
     }
   </style>
