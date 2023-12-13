@@ -49,7 +49,7 @@ p {
 }
 
 .wrapper-background {
-    background-image: url(../../public/assets/images/fondo.webp);
+    background-image: url("/assets/images/fondo.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -71,7 +71,7 @@ p {
     text-align: center;
     text-transform: uppercase;
     font-size: 0.8rem;
-margin-top: 15px;
+    margin-top: 15px;
 
 }
 
@@ -90,4 +90,3 @@ margin-top: 15px;
     font-size: 2rem;
     color: $color-dark-green;
 }
-

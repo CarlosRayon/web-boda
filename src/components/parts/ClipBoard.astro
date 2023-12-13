@@ -50,8 +50,8 @@ const { id, text } = Astro.props;
 <script>
   import ClipboardJS from "clipboard";
 
-  var btns = document.querySelector(".btn-clipboard");
-  var clipboard = new ClipboardJS(btns);
+  const btnCopy = document.querySelector(".btn-clipboard");
+  const clipboard = new ClipboardJS(btnCopy);
 
   clipboard.on("success", function (e) {
     console.log(e);
