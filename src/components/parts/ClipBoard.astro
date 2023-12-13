@@ -1,0 +1,64 @@
+---
+import Icon from "astro-icon";
+
+interface Props {
+  id: string;
+  text: string;
+}
+const { id, text } = Astro.props;
+---
+
+<div class="clipboard">
+  <input id={id} class="border p-2 flex-grow" value={text} />
+  <button class="btn-clipboard" data-clipboard-target={`#${id}`}>
+    <Icon name="mdi:clipboard-outline" />
+  </button>
+</div>
+
+<style lang="scss">
+  @import "../../styles/variables/_color.scss";
+  .clipboard {
+    display: flex;
+    margin-top: 25px;
+
+    input {
+      background-color: $color-bg-beige;
+      color: $color-dark-green;
+      border-radius: 25px 0 0 25px;
+      border: 1px solid $color-dark-green;
+      width: 285px;
+      padding: 0 30px;
+    }
+
+    .btn-clipboard {
+      width: 50px;
+      color: $color-gold;
+      background-color: $color-bg-beige;
+      border-radius: 0px 25px 25px 0px;
+      border: 1px solid $color-dark-green;
+      border-left: none;
+      padding: 10px;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    .btn-clipboard:hover {
+      background-color: $color-light-beige;
+      color: $color-dark-green;
+    }
+  }
+</style>
+
+<script>
+  import ClipboardJS from "clipboard";
+
+  var btns = document.querySelector(".btn-clipboard");
+  var clipboard = new ClipboardJS(btns);
+
+  clipboard.on("success", function (e) {
+    console.log(e);
+    // alert("Copied to clipboard!");
+  });
+
+  clipboard.on("error", function (e) {
+    console.log(e);
+  });
+</script>
