@@ -9,7 +9,7 @@ const { id, text } = Astro.props;
 ---
 
 <div class="clipboard">
-  <input id={id} class="border p-2 flex-grow" value={text} />
+  <div id={id} class="clipboard__text border p-2 flex-grow">{text}</div>
   <button class="btn-clipboard" data-clipboard-target={`#${id}`}>
     <Icon name="mdi:clipboard-outline" />
   </button>
@@ -21,13 +21,16 @@ const { id, text } = Astro.props;
     display: flex;
     margin-top: 25px;
 
-    input {
+    .clipboard__text {
+      display: grid;
+      place-items: center;
+      text-wrap: balance;
       background-color: $color-bg-beige;
       color: $color-dark-green;
       border-radius: 25px 0 0 25px;
       border: 1px solid $color-dark-green;
-      width: 285px;
-      padding: 0 30px;
+      width: 230px;
+      padding: 0 5px;
     }
 
     .btn-clipboard {
