@@ -18,8 +18,8 @@ import EventTimes from "./parts/EventTimes.astro";
       <h2 class="celebration__title font-start-midnight">Boda y Celebración</h2>
 
       <div class="celebration__info">
-        <h2 class="title-block">Dia</h2>
-        <p>Sabado 15 de Junio - 13h</p>
+        <h2 class="title-block">Día</h2>
+        <p>Sábado 15 de Junio - 13h</p>
         <button id="openModalAssistence" class="button-link"
           >Confirmar Asistencia</button
         >
@@ -27,12 +27,12 @@ import EventTimes from "./parts/EventTimes.astro";
         <div class="celebration__info">
           <h2 class="title-block">Lugar</h2>
           <p>Restaurante Los Molinos de Ruente</p>
-          <button id="openModalMap" class="button-link">Como llegar</button>
+          <button id="openModalMap" class="button-link">Cómo llegar</button>
         </div>
 
         <div class="celebration__info">
-          <h2 class="title-block">Autobus</h2>
-          <p>Horario autobus para invitados</p>
+          <h2 class="title-block">Autobús</h2>
+          <p>Horario autobús para invitados</p>
           <button id="openModalBusschedules" class="button-link"
             >Ver horarios</button
           >
@@ -59,7 +59,7 @@ import EventTimes from "./parts/EventTimes.astro";
     id="modalMap"
     open="openModalMap"
     close="closeModalMap"
-    title="¿Como llegar a la ceremonia?"
+    title="¿Cómo llegar a la ceremonia?"
   >
     <MapIframe slot="body" />
     <a
@@ -74,7 +74,7 @@ import EventTimes from "./parts/EventTimes.astro";
     id="modalBusSchedules"
     open="openModalBusschedules"
     close="closeModalBusschedules"
-    title="Horarios de autobus"
+    title="Horarios de autobús"
   >
     <div class="flex justify-center items-center flex-col" slot="body">
       <EventTimes />
