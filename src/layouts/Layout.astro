@@ -1,5 +1,6 @@
 ---
 import "../styles/global.scss";
+import "animate.css";
 
 interface Props {
   title: string;
@@ -17,13 +18,9 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
   </head>
   <body class="scrollbar-style">
     <slot />
   </body>
 </html>
+

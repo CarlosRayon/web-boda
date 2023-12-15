@@ -12,12 +12,15 @@ import Slider from "./parts/Slider.astro";
     <h2 class="title-block my-6">Ayudanos a llegar lejos</h2>
 
     <div class="circle-icon helpus__circle-icon">
-      <Icon name="subway:world" class="animate-rotate" />
+      <Icon
+        name="mdi:airplane"
+        class="icon-plane invisible animate__animated animate__slow"
+      />
     </div>
 
     <div class="helpus__text">
       <p>Nos gustaria ir de vieje de novio lejos, muy lejos..</p>
-      <p>¿Nos ayudas a consegirlo</p>
+      <p>¿Nos ayudas a consegirlo?</p>
     </div>
 
     <button id="openModalHelpUs" class="button-link helpus__button"
@@ -44,6 +47,11 @@ import Slider from "./parts/Slider.astro";
   </div>
 </Modal>
 
+<script>
+  import { observerAnimation } from "../scripts/observerAnimation";
+  observerAnimation(".icon-plane", "animate__fadeInBottomLeft");
+</script>
+
 <style lang="scss">
   @import "../styles/variables/_color.scss";
   .helpus {
@@ -62,6 +70,7 @@ import Slider from "./parts/Slider.astro";
     text-align: center;
     margin-bottom: 2rem;
     height: 60px;
+    padding: 5px;
   }
 
   .helpus__button {
