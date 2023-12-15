@@ -1,19 +1,17 @@
 ---
 interface Props {
-  icon: string;
   tips: string;
   description: string;
 }
-
-import { Icon } from "astro-icon";
-const { icon, tips, description } = Astro.props;
+const {tips, description } = Astro.props;
 ---
 
 <div class="mb-2 flex justify-start items-center w-full">
   <div
     class="z-20 flex items-center order-1 me-3 shadow-xl w-8 h-8 p-1 rounded-full list-icon__icon animate__animated animate__bounceInLeft"
   >
-    <Icon name={icon} />
+    <!-- <Icon name={icon} /> -->
+    <slot />
   </div>
   <div
     class="order-1 rounded-lg shadow-xl w-5/12 p-2 animate__animated animate__backInRight list-icon__list"
@@ -49,5 +47,4 @@ const { icon, tips, description } = Astro.props;
       border-color: $color-dark-green;
     }
   }
-
 </style>
