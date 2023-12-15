@@ -4,7 +4,7 @@ export function observerAnimation(classElement: string, classAnimation: string):
     const options: IntersectionObserverInit = {
         root: document,
         threshold: [0.9],
-        rootMargin: "0px 0px -40px 0px",
+        rootMargin: "0px 0px -20px 0px",
     };
 
     const observer = new IntersectionObserver((entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
