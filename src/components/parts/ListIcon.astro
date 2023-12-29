@@ -3,14 +3,13 @@ interface Props {
   tips: string;
   description: string;
 }
-const {tips, description } = Astro.props;
+const { tips, description } = Astro.props;
 ---
 
 <div class="mb-2 flex justify-start items-center w-full">
   <div
     class="z-20 flex items-center order-1 me-3 shadow-xl w-8 h-8 p-1 rounded-full list-icon__icon animate__animated animate__bounceInLeft"
   >
-    <!-- <Icon name={icon} /> -->
     <slot />
   </div>
   <div
