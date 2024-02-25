@@ -2,8 +2,9 @@
 interface Props {
   tips: string;
   description: string;
+  link: string;
 }
-const { tips, description } = Astro.props;
+const { tips, description, link = '' } = Astro.props;
 ---
 
 <div class="mb-2 flex justify-start items-center w-full">
@@ -15,10 +16,12 @@ const { tips, description } = Astro.props;
   <div
     class="order-1 rounded-lg shadow-xl w-5/12 p-2 animate__animated animate__backInRight list-icon__list"
   >
-    <p class="list-icon__text">
-      <strong>{tips}</strong>
-      {description}
-    </p>
+    <a href={link} target="_blank">
+      <p class="list-icon__text">
+        <strong>{tips}</strong>
+        {description}
+      </p>
+    </a>
   </div>
 </div>
 
