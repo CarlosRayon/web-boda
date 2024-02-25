@@ -3,9 +3,32 @@ import Icon from "./parts/Icon.astro";
 import Tips from "./parts/Tips.astro";
 import Modal from "./parts/Modal.astro";
 import PlayListIframe from "./parts/PlayListIframe.astro";
+import PreBoda from "./parts/PreBoda.astro";
 ---
 
-<section class="party container grid grid-cols-1 md:grid-cols-2 gap-7">
+<section class="party container grid grid-cols-1 md:grid-cols-3 gap-7">
+  <div
+    class="party__block party__block--preboda flex justify-center items-center flex-col shadow-lg"
+  >
+    <h2 class="title-block my-6">PreBoda</h2>
+
+    <div class="circle-icon party__circle-icon">
+      <span
+        class="icon-container icon-preboda invisible animate__animated animate__slow"
+      >
+        <Icon icon="preboda" />
+      </span>
+    </div>
+
+    <div class="party__text">
+      <p>¿Contamos contigo?</p>
+    </div>
+
+    <button id="openModalPreBoda" class="button-link party__button"
+      >Dónde es</button
+    >
+  </div>
+
   <div
     class="party__block party__block--playlist flex justify-center items-center flex-col shadow-lg"
   >
@@ -57,6 +80,23 @@ import PlayListIframe from "./parts/PlayListIframe.astro";
   </div>
 
   <Modal
+    id="modalPreBoda"
+    open="openModalPreBoda"
+    close="closeModalPreBoda"
+    title="PreBoda"
+  >
+    <div class="flex justify-center items-center flex-col" slot="body">
+      <PreBoda />
+      <a
+        href="https://maps.app.goo.gl/o44rXDraYVYCajLu7"
+        target="blank"
+        class="button-link"
+        slot="footer">Ampliar mapa</a
+      >
+    </div>
+  </Modal>
+
+  <Modal
     id="modalPlayList"
     open="openModalPlayList"
     close="closeModalPlayList"
@@ -85,7 +125,8 @@ import PlayListIframe from "./parts/PlayListIframe.astro";
 
 <script>
   import { observerAnimation } from "../scripts/observerAnimation";
-  observerAnimation(".icon-music", "animate__fadeInLeft");
+  observerAnimation(".icon-preboda", "animate__fadeInLeft");
+  observerAnimation(".icon-music", "animate__fadeInUp");
   observerAnimation(".icon-notes", "animate__fadeInRight");
 </script>
 
